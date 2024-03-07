@@ -1,0 +1,144 @@
+HTML (HyperText Markup Language) has a wide range of tags, each serving a specific purpose. Here's a list of commonly used HTML tags along with their use cases and examples:
+
+1. **`<!DOCTYPE>`**: Defines the document type and version of HTML.
+
+   Example:
+
+   <!DOCTYPE html>
+
+
+2. **`<html>`**: Defines the root of an HTML document.
+
+   Example:
+
+   <html>
+       <!-- Document content goes here -->
+   </html>
+
+
+3. **`<head>`**: Contains meta-information about the document, such as the title, links to stylesheets, and scripts.
+
+   Example:
+
+   <head>
+       <title>Page Title</title>
+       <link rel="stylesheet" href="styles.css">
+       <script src="script.js"></script>
+   </head>
+
+
+4. **`<body>`**: Contains the content of the document, such as text, images, and other elements.
+
+   Example:
+
+   <body>
+       <h1>Heading</h1>
+       <p>Paragraph text</p>
+       <img src="image.jpg" alt="Image">
+   </body>
+
+
+5. **`<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>`, `<h6>`**: Heading tags for different levels of headings.
+
+   Example:
+
+   <h1>Main Heading</h1>
+   <h2>Subheading</h2>
+
+
+6. **`<p>`**: Defines a paragraph of text.
+
+   Example:
+
+   <p>This is a paragraph.</p>
+
+
+7. **`<a>`**: Defines a hyperlink.
+
+   Example:
+
+   <a href="https://example.com">Link text</a>
+
+
+8. **`<img>`**: Embeds an image in the document.
+
+   Example:
+
+   <img src="image.jpg" alt="Image description">
+
+
+9. **`<ul>`, `<ol>`, `<li>`**: Used to create unordered and ordered lists.
+
+   Example:
+
+   <ul>
+       <li>Item 1</li>
+       <li>Item 2</li>
+   </ul>
+   <ol>
+       <li>Item 1</li>
+       <li>Item 2</li>
+   </ol>
+
+
+10. **`<div>`**: Defines a division or section in the document, often used for styling purposes.
+
+    Example:
+
+    <div>
+        <p>Text inside a div</p>
+    </div>
+
+
+11. **`<span>`**: Defines a span of text for styling purposes.
+
+    Example:
+
+    <p>This is <span style="color: red;">red</span> text.</p>
+
+
+12. **`<table>`, `<tr>`, `<th>`, `<td>`**: Used to create tables and their rows, headers, and cells.
+
+    Example:
+
+    <table>
+        <tr>
+            <th>Header 1</th>
+            <th>Header 2</th>
+        </tr>
+        <tr>
+            <td>Row 1, Cell 1</td>
+            <td>Row 1, Cell 2</td>
+        </tr>
+    </table>
+
+
+13. **`<form>`, `<input>`, `<button>`, `<label>`**: Used to create forms for user input.
+
+    Example:
+
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <button type="submit">Submit</button>
+    </form>
+
+
+14. **`<video>`, `<audio>`, `<source>`**: Used to embed video and audio files.
+
+    Example:
+
+    <video controls>
+        <source src="video.mp4" type="video/mp4">
+    </video>
+    <audio controls>
+        <source src="audio.mp3" type="audio/mp3">
+    </audio>
+
+
+15. **`<iframe>`**: Embeds another document within the current HTML document.
+
+    Example:
+
+    <iframe src="https://example.com"></iframe>
+

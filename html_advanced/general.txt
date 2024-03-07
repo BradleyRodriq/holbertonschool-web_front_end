@@ -1,0 +1,101 @@
+1. **Guidelines for HTML:**
+   - Use lowercase tags: `<html>`, `<body>`, `<div>`.
+   - Always include an `alt` attribute for images.
+   - Use indentation and comments for readability.
+   - Use semantic HTML tags for better structure.
+
+2. **Creating the skeleton of an HTML5 page:**
+
+   <!DOCTYPE html>
+   <html>
+   <head>
+       <title>Page Title</title>
+   </head>
+   <body>
+       <header>
+           <h1>Header</h1>
+       </header>
+       <main>
+           <article>
+               <h2>Article</h2>
+               <p>Article content goes here.</p>
+           </article>
+           <aside>
+               <h3>Aside</h3>
+               <p>Additional content goes here.</p>
+           </aside>
+       </main>
+       <footer>
+           <h4>Footer</h4>
+       </footer>
+   </body>
+   </html>
+
+
+3. **Using semantic HTML tags:**
+   - `<header>`: Represents a group of introductory or navigational aids.
+   - `<main>`: Represents the main content of the document.
+   - `<footer>`: Represents a footer for the section it appears in.
+   - `<article>`: Represents a self-contained composition that can be independently distributable or reusable.
+   - `<nav>`: Represents a section of a page that links to other pages or to parts within the page.
+
+4. **Use cases for `<div>` vs `<span>`:**
+   - Use `<div>` for block-level elements that need to be grouped together.
+   - Use `<span>` for inline elements that need to be styled or manipulated as a single unit.
+
+5. **Semantic values of some HTML5 tags:**
+   - `<header>`: Introduces a group of introductory or navigational aids.
+   - `<main>`: Contains the central content unique to the document.
+   - `<footer>`: Represents a footer for its nearest section or article element.
+   - `<article>`: Represents a self-contained composition in a document.
+   - `<nav>`: Represents a section of a page whose purpose is to provide navigation links.
+
+6. **Using headings and hierarchical order:**
+   - Use headings (`<h1>` to `<h6>`) to define the structure of your content.
+   - Follow the hierarchical order (`<h1>` for main headings, `<h2>` for subheadings, etc.) for accessibility and SEO.
+
+7. **Making lists in HTML:**
+   - Ordered list: `<ol>` with `<li>` items.
+   - Unordered list: `<ul>` with `<li>` items.
+   - Definition list: `<dl>` with `<dt>` for terms and `<dd>` for definitions.
+
+8. **Differences between media types (SVG, GIF, PNG, JPG):**
+   - SVG: Scalable Vector Graphics, best for logos and icons as they can be scaled without losing quality.
+   - GIF: Graphics Interchange Format, suitable for simple animations and images with a limited color palette.
+   - PNG: Portable Network Graphics, ideal for images with transparency or sharp edges.
+   - JPG: Joint Photographic Experts Group, best for photographs and complex images, but can lose quality with repeated editing and saving.
+
+9. **Structuring data in a table:**
+   - Use `<table>` for the table element.
+   - Use `<tr>` for table rows.
+   - Use `<th>` for table headers (optional but recommended).
+   - Use `<td>` for table cells (data).
+
+10. **Integrating a video in a webpage:**
+
+    <video controls>
+        <source src="movie.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+
+11. **Integrating an audio file in a webpage:**
+
+    <audio controls>
+        <source src="music.mp3" type="audio/mp3">
+        Your browser does not support the audio tag.
+    </audio>
+
+
+12. **Embedding external content:**
+    - Use `<iframe>` for embedding external content like maps or videos.
+
+    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
+
+
+13. **Correctly structuring an HTML page:**
+    - Use `<!DOCTYPE html>` to declare the document type.
+    - Use `<html>` as the root element.
+    - Use `<head>` to contain meta-information about the document.
+    - Use `<body>` to contain the content of the document.
+
