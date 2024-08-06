@@ -527,6 +527,7 @@
     ============================= */
     .hero-article {
     background-size: 150rem 100rem;
+    background-position: 50% 0;
     }
 
     .hero-article::before {
