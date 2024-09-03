@@ -7,7 +7,6 @@ function changeMode(size, weight, transform, background, color) {
         document.body.style.color = color;
     };
 }
-
 function main() {
     const spooky = changeMode(9, 'bold', 'uppercase', 'pink', 'green');
     const darkMode = changeMode(12, 'bold', 'capitalize', 'black', 'white');
@@ -32,5 +31,4 @@ function main() {
     screamModeButton.onclick = screamMode;
     document.body.appendChild(screamModeButton);
 }
-
 main();
