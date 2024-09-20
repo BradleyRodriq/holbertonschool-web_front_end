@@ -14,10 +14,10 @@
                 const expires = `expires=${date.toUTCString()}`;
 
                 const firstnameInputValue = document.getElementById('firstname').value;
-                document.cookie = `firstname=${firstnameInputValue}` + `expires=${expires}`;
+                document.cookie = `${firstnameInputValue}` + ` expires=${expires}`;
 
                 const emailInputValue = document.getElementById('email').value;
-                document.cookie = `email=${emailInputValue}` + `expires=${expires}`;
+                document.cookie = `${emailInputValue}` + ` expires=${expires}`;
             }
 
             function showCookies() {
