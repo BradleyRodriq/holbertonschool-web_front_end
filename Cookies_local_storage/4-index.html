@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Create basic cookie</title>
+        <script src=" https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js "></script>
         <style>
             .logout-link {
                 font-style: italic;
@@ -16,39 +17,19 @@
             }
         </style>
         <script>
-            function setCookies() {
-                const date = new Date();
-                const remainingDays = 10;
-                date.setTime(date.getTime() + (remainingDays * 24 * 60 * 60 * 1000));
-                const expires = `expires=${date.toUTCString()}`;
-
-                const firstnameInputValue = document.getElementById('firstname').value;
-                document.cookie = `firstname=${firstnameInputValue}; ` + `expires=${expires}`;
-
-                const emailInputValue = document.getElementById('email').value;
-                document.cookie = `email=${emailInputValue}; ` + `expires=${expires}`;
+            function setCookiesAndShowWelcomeMessage() {
+                Cookies.set('firstname', document.getElementById('firstname').value, {path: '/'});
+                Cookies.set('email', document.getElementById('email').value, {path: '/'});
+                
+                showWelcomeMessageOrForm();
             }
 
             function showCookies() {
                 const p = document.createElement('p');
-                p.innerHTML = `Email: ${getCookie('email')} - Firstname: ${getCookie('firstname')}`;
+                p.innerHTML = `Email: ${Cookies.get('email')} - Firstname: ${Cookies.get('firstname')}`;
                 document.body.appendChild(p);
             }
 
-            function getCookie(name) {
-                const cookieParts = document.cookie.split('; ');
-                cookieParts.reverse();
-
-                for (const cookiePair of cookieParts) {
-                    const [cookieName, cookieValue] = cookiePair.split('=');
-
-                    if (cookieName === name) {
-                        return cookieValue;
-                    }
-                }
-
-                return '';
-            }
 
             function showForm() {
                 const welcomeMessage = document.getElementById('welcomeMessage');
@@ -63,8 +44,16 @@
             }
 
             function deleteCookiesAndShowForm() {
-                document.cookie = 'firstname=; expires=Thu, 01 Jan 1970 00:00:00 UTC;';
-                document.cookie = 'email=; expires=Thu, 01 Jan 1970 00:00:00 UTC;';
+                Cookies.remove('firstname', {path: '/'});
+                Cookies.remove('email', {path: '/'});
+
+                document.body.innerHTML = `
+                    <div id="loginForm">
+                        <h2>Login to the website</h2>
+                        <input type="text" id="firstname" placeholder="Firstname">
+                        <input type="text" id="email" placeholder="Email">
+                        <button onClick="setCookies()">Log me in</button>
+                    </div>`;
                 showForm();
             }
 
@@ -88,7 +77,7 @@
             <h2>Login to the website</h2>
             <input type="text" id="firstname" placeholder="Firstname">
             <input type="text" id="email" placeholder="Email">
-            <button onClick="setCookies()">Log me in</button>
+            <button onClick="setCookiesAndShowWelcomeMessage()">Log me in</button>
         </div>
     </body>
 </html>
